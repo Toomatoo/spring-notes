@@ -1,0 +1,17 @@
+Spring Tutorial 11: Bean Scope
+====================================================================================================
+Basic Bean Scope
+1. Singleton
+2. Prototype
+
+---
+default bean scope is singleton
+But if we want prototype, then
+<bean id="triangle" class="me.tomato.Triangle" autowire="byName" scope="prototype">
+---
+
+
+Web-aware Context Bean Scope
+1. Request: new bean for new request
+2. Session: new bean for new session
+3. Global Session: new bean for a HTTP request

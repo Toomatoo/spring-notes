@@ -1,0 +1,19 @@
+Spring Tutorial 10: Bean Autowiring
+====================================================================================================
+At present, if the target object has some member objects, we need to write new beans for these
+members. And then write properties to set the value of the members.
+Now I want to automatically set the members of the target object.
+
+1. Use autowiring tag in the target object bean
+---
+<bean id="triangle" class="me.tomato.Triangle" autowire="byName" name="triangle2" />
+---
+- "byName" means autowiring exactly by name. When I have a variable with the same name of a bean.
+  It will be assigned automatically.
+
+2. Also write setter and getter in the class
+
+* Autowire is not something very convenient. For debugging and other things, use properties to
+  initialize the members is a clear way.
+
+  

@@ -1,0 +1,25 @@
+Spring Tutorial 09: Initializing Collections
+====================================================================================================
+If we have a collection variable inside a class, like a list, we need to modify the configure file
+"spring.xml" to initialize the "list".
+
+1. Modify the class Triangle to have a list variable. And write setter and getter for the list.
+
+2. Init the property of the bean "triangle"
+
+---
+<bean id="triangle" class="me.tomato.Triangle" name="triangle2">
+      <property name="points">
+             <list>
+                    <ref bean="point1" />
+                    <ref bean="point2" />
+                    <ref bean="point3" />
+             </list>
+      </property>
+</bean>
+---
+
+You can see that the property tag here is more complex. It contains a list tag to init the list
+variable inside the triangle.
+
+2. Then as usual, getBean to get a object of Triangle, then I can use the triangle.

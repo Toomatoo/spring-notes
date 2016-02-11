@@ -1,0 +1,8 @@
+Spring Tutorial 02: Setup
+====================================================================================================
+
+Download link:
+1. Spring: http://maven.springframework.org/release/org/springframework/spring/
+2. https://commons.apache.org/proper/commons-logging/download_logging.cgi
+
+Add the jars into the project.

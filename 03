@@ -1,0 +1,18 @@
+Spring Tutorial 03: Spring Bean Factory
+====================================================================================================
+
+1. Spring is a container of Beans
+- Spring manages the objects: life cycle, etc.
+- So that Spring need some handlers to control the objects.
+
+2. Factory Pattern
+- When a object in the container creates a new object?
+- This object need to ask a object factory to create a object on demand.
+- String Bean Factory
+-- Object ask the factory to create a object
+-- Factory finds some configure in Spring XML
+-- Bean Factory creates the actual object asked.
+- What we need to do
+-- 1. object in the container asks
+-- 2. Spring XML
+-- 3. New Object is under control of Spring

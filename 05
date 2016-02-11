@@ -1,0 +1,30 @@
+Spring Tutorial 05: ApplicationContext and Property Initialization
+====================================================================================================
+
+1. Use ApplicationContext
+- A little bit confusion about file path
+- Make Triangle more complex
+
+---
+// Variable Injection
+ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+Triangle triangle = (Triangle) context.getBean("triangle");
+---
+
+2. Triangle can have a member variable
+- write a setter and getter in the Triangle. It make it possible for Factory to set value to the
+  object
+- write a tag in spring.xml with <property />, name = the name of the member variable, value =
+  whatever you want
+- Under this situation, when getBean again, we will get the Triangle configured with the property.
+- But the member variables are assigned to constant (only the value in the property). It is called
+  setter injection.
+
+---
+When the object requested only have primitive variables
+<bean id="point3" class="me.tomato.Point">
+  <property name="x" value="-20" />
+  <property name="y" value="10" />
+</bean>
+It just contains some properties directly, with "name" (variable name) and "value"  (assigned value)
+---

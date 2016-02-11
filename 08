@@ -1,0 +1,41 @@
+Spring Tutorial 08: Inner Bean
+====================================================================================================
+
+1. Inner Bean
+Continue the previous tutorial, points for triangle may not be used by others. So that we consider
+making the points inner bean.
+
+---
+<bean id="triangle" class="me.tomato.InjectingObjectsTriangle">
+    <property name="pointA" ref="point1" />
+    <property name="pointB">
+        <bean class="me.tomato.Point">
+            <property name="x" value="20" />
+            <property name="y" value="0" />
+        </bean>
+    </property>
+    <property name="pointC" ref="point3" />
+</bean>
+---
+- the inner bean does not need a "id" because this bean will not be used outside the triangle.
+
+
+
+2. Alias
+
+I can call triangle with id, name, alias.
+---
+<alias name="triangle" alias="triangle-alias" />
+<bean id="triangle" class="me.tomato.InjectingObjectsTriangle" name="triangle2">
+---
+
+
+
+3. idref
+
+If the reference does not exist, then it will throw a exception.
+---
+<property name="pointA">
+    <idref="point1" />
+</property>
+---

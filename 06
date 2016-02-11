@@ -1,0 +1,12 @@
+Spring Tutorial 06: Using constructor
+====================================================================================================
+Instead of using setter, use constructor here.
+
+1. Use constructor-arg tag. Only values here.
+
+2. Add more member variables.
+- And I can define more constructors
+
+3. Define the complex constructor-arg
+- one way: add type parameter into the tag
+- the other way: add "index" tag into the tag

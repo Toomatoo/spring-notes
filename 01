@@ -1,0 +1,19 @@
+Spring Tutorial 01: Understanding Dependency Injection
+====================================================================================================
+1. Polymorphism
+
+---
+public void myDraw(Shape shape) {
+
+    Shape.draw();
+
+}
+
+Shape shape = new Triangle();
+myDraw(shape);
+---
+
+Then I have a method to draw a shape, but draw whatever shape here!
+Here, we do not need to modify the draw action method. Just input different kinds of shapes.
+The point is, something need to be changed, but we need to choose what to change.
+Here, changing shapes are more proper.
